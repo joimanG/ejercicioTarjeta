@@ -1,9 +1,9 @@
 <mat-card class="example-card">
   <mat-card-header>
-    <div [style.background-image]= "url('https://i.ytimg.com/vi/mSNoDlQonSU/hqdefault.jpg')" mat-card-avatar class="example-header-image"></div>
+    <div style.background-image="url({{persona.foto}})" mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{persona.nombre }}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image src="https://i.ytimg.com/vi/mSNoDlQonSU/hqdefault.jpg" alt="Joiman Gomez">
+  <img mat-card-image src={{persona.foto}} alt="{{persona.nombre }}">
   <mat-card-content>
     <p> 
         {{persona.texto }}
@@ -14,8 +14,7 @@
     <button mat-button (click)='onDislike ()'>DISLIKE</button>
   </mat-card-actions>
 </mat-card>
-<div [style.background]= "yellow">
-  <br>LIKES {{ likes }}
-<br>DISLIKES {{ dislikes }}
-<br><br>TOTAL VOTES {{ totalVotes }}
-</div>
+<app-result></app-result>
+
+
+
