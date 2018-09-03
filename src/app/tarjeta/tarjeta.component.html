@@ -10,11 +10,19 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button (click)='onLike ()'>LIKE</button>
-    <button mat-button (click)='onDislike ()'>DISLIKE</button>
+    <!-- <button mat-button (click)='onLike ()'>LIKE</button>
+    <button mat-button (click)='onDislike ()'>DISLIKE</button> -->
+    <app-actions (elClick)='($event)'></app-actions>
+    
   </mat-card-actions>
+  <!-- <app-actions [darleClick($events)]=true></app-actions> -->
+
+  
+  
 </mat-card>
-<app-result [likes]="likes"></app-result>
+
+
+
 
 
 

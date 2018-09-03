@@ -7,8 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
   @Input() likes: number;
-  //@Output() darleClick = new EventEmitter<boolean>();
-  constructor() { }
+  @Input() dislikes: number;
+    constructor() { }
 
   ngOnInit() {
   }

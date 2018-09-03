@@ -7,12 +7,14 @@ import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { ResultComponent } from './result/result.component';
+import { ActionsComponent } from './actions/actions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TarjetaComponent,
-    ResultComponent
+    ResultComponent,
+    ActionsComponent
   ],
   imports: [
     BrowserModule,

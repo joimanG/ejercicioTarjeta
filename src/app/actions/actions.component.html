@@ -1,0 +1,5 @@
+<mat-card-actions>
+  <button mat-button (click)='elClick("LIKE")'>LIKE</button>
+  <button mat-button (click)='elClick("DISLIKE")'>DISLIKE</button>
+</mat-card-actions>
+<app-result [likes]="likes" [dislikes]="dislikes"></app-result>
