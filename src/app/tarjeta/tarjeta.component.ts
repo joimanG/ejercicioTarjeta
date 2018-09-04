@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { persona } from './data';
+import { persona, personas } from './data';
 
 @Component({
   selector: 'app-tarjeta',
@@ -13,6 +13,7 @@ export class TarjetaComponent implements OnInit {
   public dislikes = 0;
   // public totalVotes = 0 ;
   public persona = persona;
+  public personas = personas;
   // public result = result;
    ngOnInit() {
    }

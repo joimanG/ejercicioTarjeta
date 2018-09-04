@@ -1,3 +1,4 @@
+<div *ngFor="let persona of personas">
 <mat-card class="example-card">
   <mat-card-header>
     <div style.background-image="url({{persona.foto}})" mat-card-avatar class="example-header-image"></div>
@@ -15,12 +16,14 @@
     <app-actions (elClick)='($event)'></app-actions>
     
   </mat-card-actions>
-  <!-- <app-actions [darleClick($events)]=true></app-actions> -->
+  </mat-card>
+</div>
 
-  
-  
-</mat-card>
-
+<!-- <ul> 
+    <li *ngFor="let persona of personas; let i = index"> 
+      {{ i + 1 }} - {{ persona.nombre }} 
+    </li>
+</ul> -->
 
 
 
