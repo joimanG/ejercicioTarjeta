@@ -8,19 +8,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { ResultComponent } from './result/result.component';
 import { ActionsComponent } from './actions/actions.component';
+import { RouterModule, Routes } from '@angular/router';
+import { appRoutes } from './routing';
+import { CardDetailsComponent } from './card-details/card-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TarjetaComponent,
     ResultComponent,
-    ActionsComponent
+    ActionsComponent,
+    CardDetailsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot(
+      appRoutes,
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
