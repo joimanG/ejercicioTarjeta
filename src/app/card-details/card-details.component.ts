@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { personas } from '../tarjeta/data';
-import { Persona } from '../../../ejercicioTarjeta/src/app/tarjeta/person.model';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-card-details',
@@ -10,13 +10,14 @@ import { Persona } from '../../../ejercicioTarjeta/src/app/tarjeta/person.model'
 })
 export class CardDetailsComponent implements OnInit {
   public personas = personas;
-  constructor(private router: Router, private activated: ActivatedRoute) { }
-
+  constructor(private router: Router, private activated: ActivatedRoute, private service: AppService) { }
+  public datos = this.service;
   public nombre: string;
   public texto: string;
    public setPersona(index: number ) {
-      this.nombre = personas[index].nombre;
-      this.texto = personas[index].texto;
+     this.nombre = this.datos.getDatos(index).nombre;
+      // this.nombre = personas[index].nombre;
+      this.texto = this.datos.getDatos(index).texto;
    }
 
   ngOnInit() {

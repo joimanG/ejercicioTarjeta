@@ -11,6 +11,8 @@ import { ActionsComponent } from './actions/actions.component';
 import { RouterModule, Routes } from '@angular/router';
 import { appRoutes } from './routing';
 import { CardDetailsComponent } from './card-details/card-details.component';
+import { AppService } from './app.service';
+import { BordeDirective } from './directives/borde.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { CardDetailsComponent } from './card-details/card-details.component';
     TarjetaComponent,
     ResultComponent,
     ActionsComponent,
-    CardDetailsComponent
+    CardDetailsComponent,
+    BordeDirective
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { CardDetailsComponent } from './card-details/card-details.component';
       appRoutes,
     )
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

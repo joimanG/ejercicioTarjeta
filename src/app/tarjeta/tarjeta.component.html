@@ -1,5 +1,6 @@
-<div *ngFor="let persona of personas ; index as i">
-<mat-card (click)="navigate(i)" class="example-card">
+<div class="size">
+<ng-container  *ngFor="let persona of personas ; index as i" >
+<mat-card (click)="navigate(i)" class="example-card" appBorde>
   <mat-card-header>
     <div style.background-image="url({{persona.foto}})" mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{persona.nombre }}</mat-card-title>
@@ -17,6 +18,7 @@
     
   </mat-card-actions>
   </mat-card>
+  </ng-container>
 </div>
 <!-- <nav>
   <a routerLink="/first" routerLinkActive="active">First</a> 
