@@ -12,7 +12,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { appRoutes } from './routing';
 import { CardDetailsComponent } from './card-details/card-details.component';
 import { AppService } from './app.service';
+import { AppHttpService } from './app.http.service';
+import { AppHttpRepositoryService } from './app.http.repository.service';
 import { BordeDirective } from './directives/borde.directive';
+import { PhotosComponent } from './photos/photos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,10 +25,12 @@ import { BordeDirective } from './directives/borde.directive';
     ResultComponent,
     ActionsComponent,
     CardDetailsComponent,
-    BordeDirective
+    BordeDirective,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
@@ -32,7 +38,7 @@ import { BordeDirective } from './directives/borde.directive';
       appRoutes,
     )
   ],
-  providers: [AppService],
+  providers: [AppService, AppHttpService, AppHttpRepositoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

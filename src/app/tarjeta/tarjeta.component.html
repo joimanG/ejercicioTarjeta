@@ -1,4 +1,4 @@
-<div class="size">
+<!-- <div class="size">
 <ng-container  *ngFor="let persona of personas ; index as i" >
 <mat-card (click)="navigate(i)" class="example-card" appBorde>
   <mat-card-header>
@@ -12,25 +12,31 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <!-- <button mat-button (click)='onLike ()'>LIKE</button>
-    <button mat-button (click)='onDislike ()'>DISLIKE</button> -->
-    <app-actions (elClick)='($event)'></app-actions>
-    
-  </mat-card-actions>
+   <app-actions (elClick)='($event)'></app-actions>
+    </mat-card-actions>
   </mat-card>
   </ng-container>
-</div>
-<!-- <nav>
-  <a routerLink="/first" routerLinkActive="active">First</a> 
-  <a [routerLink]="getPath(1)">PERFIL DETALLADO</a>
-  <button (click)="navigate($event, 2)">Second Button</button> 
-</nav> -->
-
-<!-- <ul> 
-    <li *ngFor="let persona of personas; let i = index"> 
-      {{ i + 1 }} - {{ persona.nombre }} 
-    </li>
-</ul> -->
+</div> -->
+<div class="size">
+  <ng-container  *ngFor="let photo of photosLocal" >
+  <mat-card (click)="navigate(i)" class="example-card" appBorde>
+    <mat-card-header>
+      <div style.background-image="url({{photo.thumbnailUrl}})" mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{photo.id }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src={{photo.url}} alt="{{photo.id }}">
+    <mat-card-content>
+      <p> 
+          {{photo.title }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+     <app-actions (elClick)='($event)'></app-actions>
+      </mat-card-actions>
+    </mat-card>
+    </ng-container>
+  </div>
+  
 
 
 
